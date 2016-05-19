@@ -1,0 +1,14 @@
++--------+----------+------------------------+-----------------+-----------------------------------------------+------------+
+| Domain | Method   | URI                    | Name            | Action                                        | Middleware |
++--------+----------+------------------------+-----------------+-----------------------------------------------+------------+
+|        | GET|HEAD | /                      |                 | App\Http\Controllers\WelcomeController@index  | guest      |
+|        | GET|HEAD | home                   |                 | App\Http\Controllers\HomeController@index     | auth       |
+|        | GET|HEAD | clients                | clients.index   | App\Http\Controllers\ClientController@index   |            |
+|        | GET|HEAD | clients/create         | clients.create  | App\Http\Controllers\ClientController@create  |            |
+|        | POST     | clients                | clients.store   | App\Http\Controllers\ClientController@store   |            |
+|        | GET|HEAD | clients/{clients}      | clients.show    | App\Http\Controllers\ClientController@show    |            |
+|        | GET|HEAD | clients/{clients}/edit | clients.edit    | App\Http\Controllers\ClientController@edit    |            |
+|        | PUT      | clients/{clients}      | clients.update  | App\Http\Controllers\ClientController@update  |            |
+|        | PATCH    | clients/{clients}      |                 | App\Http\Controllers\ClientController@update  |            |
+|        | DELETE   | clients/{clients}      | clients.destroy | App\Http\Controllers\ClientController@destroy |            |
++--------+----------+------------------------+-----------------+-----------------------------------------------+------------+
